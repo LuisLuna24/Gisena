@@ -42,37 +42,37 @@ ob_start();
                 <div class="Card Card1">
                     <img src="img/Pedidos-Cel.png" alt="Logo Pedidos">
                     <h1>Pedidos</h1>
-                    <p>Agrega pedidos para mandar a diseñar</p>
+                    <p>Agrega tus pedidos de serigrafia, estampado, sublimacion u otros</p>
                     <input class="Card_Button" type="button" value="Entrar">
                 </div>
                 <div class="Card Card2">
                     <img src="img/Pedidos-Lona.png" alt="Logo Pedidos">
                     <h1>Lonas</h1>
-                    <p>Agregar pedidos de lonas a diseñar</p>
+                    <p>Agrega tus pedidos de lonas </p>
                     <input class="Card_Button" type="button" value="Entrar">
                 </div>
                 <div class="Card Card3">
                     <img src="img/Pedidos-Productos.png" alt="Logo Pedidos">
                     <h1>Productos</h1>
-                    <p>Solo administrador puede entrar</p>
+                    <p>Este apartado es para el administrador</p>
                     <input class="Card_Button" type="button" value="Entrar">
                 </div>
                 <div class="Card Card4">
                     <img src="img/Pedidos-Especial.png" alt="Logo Pedidos">
                     <h1>Especial</h1>
-                    <p>Pedidos especiales que sean muy especificos</p>
+                    <p>Agrega tus pedidos especiales de serigrafia, estampado, sublimacion u otros</p>
                     <input class="Card_Button" type="button" value="Entrar">
                 </div>
                 <div class="Card Card5">
                     <img src="img/Pedidos-Digital.png" alt="Logo Pedidos">
                     <h1>Digital</h1>
-                    <p>Pedidos para uso digital</p>
+                    <p>Agrega tus pedidos para uso digital como redes sociales u publicidad digital</p>
                     <input class="Card_Button" type="button" value="Entrar">
                 </div>
                 <div class="Card Card6">
                     <img src="img/Pedidos-Web.png" alt="Logo Pedidos">
                     <h1>Web</h1>
-                    <p>Pedidos de diseño web estatico</p>
+                    <p>Agrega tus pedidos de diseño web estatico (Limitado)</p>
                     <input class="Card_Button" type="button" value="Entrar">
                 </div>
             </div>

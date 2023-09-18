@@ -2,7 +2,7 @@
 include "conexion.php";
 
 
-$Aleatorio = 12;
+$Aleatorio = rand(1, 10000000000);
 $Cliente =$_POST['Cliente'];
 $Tipo = $_POST['Tipo'];
 $Nombre = $_POST['Nombre'];

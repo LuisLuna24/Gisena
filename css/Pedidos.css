@@ -85,3 +85,71 @@ label{
         width: 100%;
     }
 }
+
+/*===================================Primer Parrte =================================*/
+
+.Pedidos_Contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px ,1fr));
+}
+
+.Pedidos_Acciones{
+    display: flex;
+    flex-direction: column;
+}
+
+.Busqueda{
+    padding: 20px;
+}
+
+.Agergar{
+    padding: 20px;
+}
+
+.Agregar_Datos{
+    border: none;
+    background: transparent;
+    border-bottom: solid 3px #80F2E7;
+    color: #f6f6f6;
+}
+
+.Formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.Formulario label{
+    margin-top: 10px;
+}
+
+.Formulario .Pedidos_Boton{
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    background-color: #323D40;
+    color: #f6f6f6;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.Pedidos_Boton:hover{
+    transform: translateY(-5px);
+    background-color: #80F2E7;
+    color: #323D40;
+}
+
+.Respuesta{
+    color: #80F2E7;
+}
+
+.Opciones_Tipo{
+    background-color: #323D40;
+}
+
+.Datos_Dos{
+    width: 100px;
+}
+

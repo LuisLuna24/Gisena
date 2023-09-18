@@ -40,30 +40,43 @@ ob_start();
         <div class="Pedidos_Contenedor">
             <div class="Pedidos_Acciones">
                 <div class="Busqueda">
-                    <input type="text" id="No_Funcoona">
+                    <label>Buscar:</label>
+                    <input type="text" id="Buscar">
                 </div>
                 <div>
                     <div class="Agergar">
-                        <form action="" id="Frm_Pedidos">
+                        <form action="" id="Frm_Pedidos" class="Formulario">
                             <label>Cliente</label>
-                            <input type="text" id="Cliente">
+                            <input class="Agregar_Datos" type="text" id="Cliente">
                             <label>Tipo de Producto</label>
-                            <input type="text" id="Tipo">
+                            <select class="Agregar_Datos" type="" id="Tipo"></select>
                             <label>Nombre Producto</label>
-                            <input type="text" id="Nombre">
+                            <div id="select2lista" class="Datos_Dos"></div>
                             <label>Cantidad</label>
-                            <input type="text" id="Cantidad">
+                            <input class="Agregar_Datos" type="text" id="Cantidad">
                             <label>Fecha Entrega (Opcinal)</label>
-                            <input type="date" id="Fecha">
+                            <input class="Agregar_Datos" type="date" id="Fecha">
                             <label>Total</label>
-                            <input type="text" id="Total">
-                            <h5 id="Respuesta"></h5>
-                            <input type="submit" value="Enviar" id="Enviar">
+                            <input class="Agregar_Datos" type="text" id="Total">
+                            <h5 id="Respuesta" class="Respuesta"></h5>
+                            <input  type="submit" value="Enviar" id="Enviar" class="Pedidos_Boton">
                         </form>
                     </div>
                 </div>
             </div>
             <div class="Pedidos_Tabla">
+                <table>
+                    <thead>
+                        <th>Tipo</th>
+                        <th>Descipcion</th>
+                        <th>Pecio</th>
+                        <th>Tamaño</th>
+                    </thead>
+                    <tbody id="Datos_Tabla">
+
+                    </tbody>
+                </table>
+                <script src="js/Tabla.js"></script>
 
             </div>
         </div>
@@ -76,6 +89,20 @@ ob_start();
 	$(document).ready(function() {
 		$('#Enviar').click(function() {
 			event.preventDefault();
+
+            if ($('#Cliente').val() == "") {
+				alert("Debes agregar el cliente");
+				return false;
+			} else if ($('#Tipo').val() == "") {
+				alert("Debes agregar la tipo");
+				return false;
+			}else if ($('#Nombre').val() == "") {
+				alert("Debes agregar la nombre");
+				return false;
+			}else if ($('#Cantidad').val() == "") {
+				alert("Debes agregar la cantidad");
+				return false;
+			}
 
 			cadena = "Cliente=" + $('#Cliente').val() +
 				"&Tipo=" + $('#Tipo').val() +
@@ -90,10 +117,11 @@ ob_start();
 				data: cadena,
             })
             .done(function(res){
+                $('#Respuesta').html('');
                 $('#Respuesta').html('Enviado');
             })
             .fail(function(res){
-                console.log('Error')
+                $('#Respuesta').html('Error al Enviar');
             })
             .always(function(res){
                 console.log('Enviado');

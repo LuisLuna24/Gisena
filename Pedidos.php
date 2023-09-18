@@ -35,29 +35,30 @@ ob_start();
             </div>
         </div>
     </section>
-<!--=======================================Primer Parete=====================================-->
+<!--=======================================Segunda Parete=====================================-->
     <section class="Pedidos">
         <div class="Pedidos_Contenedor">
             <div class="Pedidos_Acciones">
                 <div class="Busqueda">
                     <label>Buscar:</label>
-                    <input type="text" id="Buscar">
+                    <input type="text" id="Buscar" placeholder="Buscar Producto en la Tabla">
                 </div>
                 <div>
                     <div class="Agergar">
+                        <h1 class="Agregar_Titulo">Agregar Pedido</h1>
                         <form action="" id="Frm_Pedidos" class="Formulario">
                             <label>Cliente</label>
-                            <input class="Agregar_Datos" type="text" id="Cliente">
+                            <input class="Agregar_Datos" type="text" id="Cliente" placeholder="Nombre Cliente">
                             <label>Tipo de Producto</label>
                             <select class="Agregar_Datos" type="" id="Tipo"></select>
                             <label>Nombre Producto</label>
                             <div id="select2lista" class="Datos_Dos"></div>
                             <label>Cantidad</label>
-                            <input class="Agregar_Datos" type="text" id="Cantidad">
+                            <input class="Agregar_Datos" type="text" id="Cantidad" placeholder="Cantidad">
                             <label>Fecha Entrega (Opcinal)</label>
                             <input class="Agregar_Datos" type="date" id="Fecha">
                             <label>Total</label>
-                            <input class="Agregar_Datos" type="text" id="Total">
+                            <input class="Agregar_Datos" type="text" id="Total" placeholder="Total de Pedidos">
                             <h5 id="Respuesta" class="Respuesta"></h5>
                             <input  type="submit" value="Enviar" id="Enviar" class="Pedidos_Boton">
                         </form>
@@ -65,14 +66,14 @@ ob_start();
                 </div>
             </div>
             <div class="Pedidos_Tabla">
-                <table>
-                    <thead>
+                <table class="Tabla_Pedidos">
+                    <thead class="Datos_Tabla">
                         <th>Tipo</th>
                         <th>Descipcion</th>
                         <th>Pecio</th>
                         <th>Tamaño</th>
                     </thead>
-                    <tbody id="Datos_Tabla">
+                    <tbody class="Datos" id="Datos_Tabla">
 
                     </tbody>
                 </table>
@@ -106,7 +107,7 @@ ob_start();
 
 			cadena = "Cliente=" + $('#Cliente').val() +
 				"&Tipo=" + $('#Tipo').val() +
-                "&Nombre=" + $('#Nombre').val() +
+                "&Nombre=" + $('#lista2').val() +
                 "&Cantidad=" + $('#Cantidad').val() +
                 "&Fecha=" + $('#Fecha').val() +
                 "&Total=" + $('#Total').val() ;

@@ -78,7 +78,7 @@ label{
     }
 
     .Cabesera_Logo img{
-        width: 100%;
+        width: 50%;
     }
 
     .Cabesera_Descripcion{
@@ -86,7 +86,7 @@ label{
     }
 }
 
-/*===================================Primer Parrte =================================*/
+/*===================================Segunda Parrte =================================*/
 
 .Pedidos_Contenedor{
     display: grid;
@@ -106,7 +106,15 @@ label{
     padding: 20px;
 }
 
+.Agregar_Titulo{
+    color: #80F2E7;
+    border-bottom:solid 3px #f6f6f6;
+    text-align: center;
+}
+
 .Agregar_Datos{
+    width: 100%;
+    height: 30px;
     border: none;
     background: transparent;
     border-bottom: solid 3px #80F2E7;
@@ -153,3 +161,38 @@ label{
     width: 100px;
 }
 
+
+.Pedidos_Tabla{
+    width: 100%;
+    padding: 20px;
+}
+
+.Tabla_Pedidos{
+    width: 100%;
+    text-align: center;
+    color: #f6f6f6;
+}
+
+.Datos_Tabla th{
+    border-bottom: solid 3px #80F2E7;
+}
+
+.Datos td{
+    border-bottom: solid 3px #80F2E7;
+}
+
+.Busqueda{
+    display: flex;
+    flex-direction: column;
+}
+
+.Busqueda input{
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom:solid 3px #80F2E7;
+    color: #f6f6f6;
+    font-family: 'Archivo ',sans-serif;
+    font-weight: bolder;
+    padding: 10px;
+}

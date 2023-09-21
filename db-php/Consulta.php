@@ -3,16 +3,23 @@ include "conexion.php";
 
 
 $Aleatorio = rand(1, 10000000000);
-$Cliente =$_POST['Cliente'];
-$Tipo = $_POST['Tipo'];
-$Nombre = $_POST['Nombre'];
+$Producto= $_POST['Producto'];
+
 $Cantidad = $_POST['Cantidad'];
-$Fecha = $_POST['Fecha'];
 $Total = $_POST['Total'];
+
+$Imagen = $_POST['Imagen'];
+$Descripcion = $_POST['Descripcion'];
+
+$Cliente =$_POST['Cliente'];
+$Telefono = $_POST['Telefono'];
+
+
 
 
 try{
-    $sql="INSERT INTO pedidos (id_Pedidos,Nombre,Cantidad,Total,Cliente,Entrega,Estado,Tipo) VALUES ($Aleatorio,'$Nombre','$Cantidad','$Total','$Cliente','$Fecha','Pendiene','$Tipo')";
+    $sql="INSERT INTO pedidos (id_Pedidos,Nombre,Cantidad,Total,Cliente,Entrega,Estado,Tipo) VALUES
+    ($Aleatorio,'$Producto','$Cantidad','$Total','$Imagen','$Descripcion','$Cliente','$Telefono', 'Pendiene')";
     $result=mysqli_query($conexion,$sql);
 }catch (Exception $e) {
     echo 'Excepción capturada: ',  $e->getMessage(), "\n";

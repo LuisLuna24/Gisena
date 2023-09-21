@@ -66,6 +66,8 @@ $(document).ready(function(){
     });
 })
 
+
+
 function recagarlista(){
     $.ajax({
         type:'POST',
@@ -73,6 +75,19 @@ function recagarlista(){
         data:'tipo='+ $('#Tipo').val(),
         success:function(res){
             $('#select2lista').html(res);
+        }
+    });
+}
+
+function PecioTotal(){
+    cadena='Producto='+ $('#lista2').val(),
+    '&Cantidad=' + $('#Cantidad').val();
+    $.ajax({
+        type:'POST',
+        url:'db-php/Precio.php',
+        data:cadena,
+        success:function(res){
+            $('#Total').html(res);
         }
     });
 }

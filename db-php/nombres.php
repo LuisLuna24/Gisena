@@ -6,7 +6,7 @@ $Tipo = $_POST['tipo'];
 
 
 
-$sql="SELECT id_Poducto,id_Tipo,Nombre FROM poductos where id_Tipo = '$Tipo'";
+$sql="SELECT id_Productos,Tipo,Nombre FROM poductos where Tipo = '$Tipo'";
 $result=mysqli_query($conexion,$sql);
 
 $cadena="<select id='lista2' name='lista2' class='Agregar_Datos'>";

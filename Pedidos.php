@@ -47,18 +47,27 @@ ob_start();
                     <div class="Agergar">
                         <h1 class="Agregar_Titulo">Agregar Pedido</h1>
                         <form action="" id="Frm_Pedidos" class="Formulario">
-                            <label>Cliente</label>
-                            <input class="Agregar_Datos" type="text" id="Cliente" placeholder="Nombre Cliente">
+
                             <label>Tipo de Producto</label>
                             <select class="Agregar_Datos" type="" id="Tipo"></select>
                             <label>Nombre Producto</label>
-                            <div id="select2lista" class="Datos_Dos"></div>
+                            <div id="select2lista" class="Agregar_Datos"></div>
+                            
                             <label>Cantidad</label>
                             <input class="Agregar_Datos" type="text" id="Cantidad" placeholder="Cantidad">
-                            <label>Fecha Entrega (Opcinal)</label>
-                            <input class="Agregar_Datos" type="date" id="Fecha">
                             <label>Total</label>
                             <input class="Agregar_Datos" type="text" id="Total" placeholder="Total de Pedidos">
+                            
+                            <label>Imagen</label>
+                            <input class="Agregar_Datos" type="text" id="Imagen">
+                            <label>Descripción</label>
+                            <input class="Agregar_Datos" type="text" id="Descipcion" placeholder="Descripcion del pedido">
+                            
+                            <label>Cliente</label>
+                            <input class="Agregar_Datos" type="text" id="Cliente" placeholder="Nombre Cliente">
+                            <label>Telefono</label>
+                            <input class="Agregar_Datos" type="text" id="Telefono" placeholder="Telefono Cliente">
+
                             <h5 id="Respuesta" class="Respuesta"></h5>
                             <input  type="submit" value="Enviar" id="Enviar" class="Pedidos_Boton">
                         </form>
@@ -105,12 +114,13 @@ ob_start();
 				return false;
 			}
 
-			cadena = "Cliente=" + $('#Cliente').val() +
-				"&Tipo=" + $('#Tipo').val() +
-                "&Nombre=" + $('#lista2').val() +
-                "&Cantidad=" + $('#Cantidad').val() +
-                "&Fecha=" + $('#Fecha').val() +
-                "&Total=" + $('#Total').val() ;
+			cadena = "Producto=" + $('#lista2').val() +
+				"&Cantidad=" + $('#Cantidad').val() +
+                "&Total=" + $('#Total').val() +
+                "&Imagen=" + $('#Imagen').val() +
+                "&Descripcion=" + $('#Descipcion').val() +
+                "&Cliente=" + $('#Cliente').val(), 
+                "&Telefono=" + $('#Telefono').val();
 
 			$.ajax({
 				type: "POST",

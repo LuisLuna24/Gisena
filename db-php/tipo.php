@@ -5,7 +5,7 @@ $salida = "";
 
 $q = isset($_POST['consulta']) ? $conexion->real_escape_string($_POST['consulta']) : null;
 
-$querry = "SELECT * FROM tipo where Nombre LIKE '%".$q."%' LIMIT 10;";
+$querry = "SELECT * FROM tipo where Nombre LIKE '%".$q."%';";
 
 
 $resultado = $conexion->query($querry);

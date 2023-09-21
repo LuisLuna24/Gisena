@@ -14,10 +14,10 @@ $num_rows = $resultado->num_rows;
 if($num_rows >0){
     while($fila = $resultado->fetch_assoc()){
         $salida.="<tr>
-        <td>".$fila['id_Tipo']."</td>
-        <td>".$fila['Descripcion']."</td>
-        <td>".$fila['Precio']."</td>
-        <td>".$fila['Tamaño']."</td>
+        <td>".$fila['Tipo']."</td>
+        <td>".$fila['Pesio']."</td>
+        <td>".$fila['Ancho']."</td>
+        <td>".$fila['Largo']."</td>
         </tr>";
     }
 }else {

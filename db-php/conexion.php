@@ -1,17 +1,12 @@
 <?php 
-	$dbhost = 'localhost';
-    $dbuser = 'root';
-    $dbpass = '';
-    $dbds = 'luma';
+$host = 'localhost';
+$user = 'postgres';
+$password = 'Hmcnjsa1*.';
+$dbname = 'luma';
 
-    //connect to MySQL
-    $conexion = new mysqli($dbhost, $dbuser, $dbpass, $dbds);
-    if (mysqli_connect_errno()) {
-        echo 'No se conecto la base de datos', mysqli_connect_error();
-        exit();
-    }else{
-        return $conexion;
-    }
+$conexion = pg_connect("host=$host dbname=$dbname user=$user password=$password");
+if (!$conexion) {
+    die("Error al conectar a la base de datos");
+}
 
-
-	?>
+?>

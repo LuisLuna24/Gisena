@@ -49,7 +49,7 @@ ob_start();
                         <form action="" id="Frm_Pedidos" class="Formulario">
 
                             <label>Tipo de Producto</label>
-                            <select class="Agregar_Datos" type="" id="Tipo"></select>
+                            <select class="Agregar_Datos" type="" id="Tipo" value="0"></select>
                             <label>Nombre Producto</label>
                             <div id="select2lista" class="Agregar_Datos"></div>
                             
@@ -59,7 +59,7 @@ ob_start();
                             <input class="Agregar_Datos" type="text" id="Total" placeholder="Total de Pedidos">
                             
                             <label>Imagen</label>
-                            <input class="Agregar_Datos" type="text" id="Imagen">
+                            <input class="Agregar_Datos" type="file" id="Imagen">
                             <label>Descripción</label>
                             <input class="Agregar_Datos" type="text" id="Descipcion" placeholder="Descripcion del pedido">
                             
@@ -77,10 +77,10 @@ ob_start();
             <div class="Pedidos_Tabla">
                 <table class="Tabla_Pedidos">
                     <thead class="Datos_Tabla">
-                        <th>Tipo</th>
-                        <th>Descipcion</th>
-                        <th>Pecio</th>
-                        <th>Tamaño</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Anchura</th>
+                        <th>Altura</th>
                     </thead>
                     <tbody class="Datos" id="Datos_Tabla">
 
@@ -119,7 +119,7 @@ ob_start();
                 "&Total=" + $('#Total').val() +
                 "&Imagen=" + $('#Imagen').val() +
                 "&Descripcion=" + $('#Descipcion').val() +
-                "&Cliente=" + $('#Cliente').val(), 
+                "&Cliente=" + $('#Cliente').val() + 
                 "&Telefono=" + $('#Telefono').val();
 
 			$.ajax({
@@ -129,7 +129,7 @@ ob_start();
             })
             .done(function(res){
                 $('#Respuesta').html('');
-                $('#Respuesta').html('Enviado');
+                $('#Respuesta').html(res);
             })
             .fail(function(res){
                 $('#Respuesta').html('Error al Enviar');

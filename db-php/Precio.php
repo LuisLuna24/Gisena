@@ -7,7 +7,7 @@ $Cantidad=$_POST['Cantidad']
 
 
 $sql="SELECT id_Productos,Tipo,Pesio FROM poductos where id_Producto = '$Producto'";
-$result=mysqli_query($conexion,$sql);
+$result=pg_connect($conexion,$sql);
 
 while($fila = $resultado->fetch_assoc()){
     $salida.=$fila['Pesio']*$Cantidad;

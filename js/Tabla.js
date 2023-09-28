@@ -10,7 +10,7 @@ function tabla(){
             var js = JSON.parse(res);
             var tabla;
             for(var i = 0;i<js.length;i++){
-                tabla+= '<tr><td>'+ js[i].Nombre+'</td><td>'+js[i].Descripcion+'</td><td>'+js[i].Precio+'</td><td>'+js[i].Tamaño+'</td></tr>'
+                tabla+= '<tr><td>'+ js[i].Nombre+'</td><td>$'+js[i].Precio+'</td><td>'+js[i].Anchura+'</td><td>'+js[i].Altura+'</td></tr>'
             }
             $('#Datos_Tabla').html(tabla);
         }
@@ -79,6 +79,8 @@ function recagarlista(){
     });
 }
 
+
+
 function PecioTotal(){
     cadena='Producto='+ $('#lista2').val(),
     '&Cantidad=' + $('#Cantidad').val();
@@ -89,5 +91,22 @@ function PecioTotal(){
         success:function(res){
             $('#Total').html(res);
         }
+    });
+}
+
+
+$(buscar_Producto());
+
+function buscar_Producto(consulta){
+    cadena = "Producto=" + $('#Tipo').val();
+    $.ajax({
+        url:'db-php/nombres.php',
+        type: 'POST',
+        dataType: 'html',
+        data: {consulta: consulta},
+    }).done(function(res){
+        $('#Producto').html(res)
+    }).fail(function(){
+        console.log(error);
     });
 }

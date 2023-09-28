@@ -1,19 +1,18 @@
 <?php
 include "conexion.php";
 
-$salida = "";
+$salida = "<option class='Opciones_Tipo' value='0'>Seleccione una Opcion</option>";
 
-$q = isset($_POST['consulta']) ? $conexion->real_escape_string($_POST['consulta']) : null;
+$q = isset($_POST['consulta']) ? $conexion->pg_escape_string($_POST['consulta']) : null;
 
-$querry = "SELECT * FROM tipo where Nombre LIKE '%".$q."%';";
+$querry = "SELECT * FROM tipo where nombre LIKE '%".$q."%' AND id_tipo>0;";
 
-
-$resultado = $conexion->query($querry);
-$num_rows = $resultado->num_rows;
+$resultado = pg_query($conexion,$querry);
+$num_rows=pg_num_rows($resultado);
 
 if($num_rows >0){
-    while($fila = $resultado->fetch_assoc()){
-        $salida.="<option class='Opciones_Tipo' value=".$fila['id_Tipo'].">".$fila['Nombre']."</option>";
+    while($fila = pg_fetch_assoc($resultado)){
+        $salida.="<option class='Opciones_Tipo' value='".$fila['id_tipo']."'>".$fila['nombre']."</option>";
     }
 }else {
     $salida.="No hay datos";

@@ -1,10 +1,10 @@
 <?php
 include "conexion.php";
 
-$sql="SELECT * FROM productos";
-$result=mysqli_query($conexion,$sql);
+$sql="SELECT * FROM productos where tipo < 0";
+$result=pg_query($conexion,$sql);
 
-while($dat=mysqli_fetch_assoc($result)){
+while($dat=pg_fetch_assoc($result)){
     $arr[]=$dat;
 }
 

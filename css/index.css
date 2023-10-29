@@ -3,76 +3,373 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.header{
+/*==============Header==============*/
+.header {
     width: 100%;
-    height: 50px;
-    background-color: black;
-    position: fixed;
+    height: 55px;
+    background: #f7efe1;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    background: #FFF url('../img/cierre-manos-masculinas-combinando-cmyk.jpg') no-repeat;
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/*================================Primer PArte==================================*/
-.Inicio {
+.header_Contenedor {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.342);
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #FFF;
-}
-.Inicio_Formulario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 300px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.678);
-    gap: 20px;
-    border-radius: 25px;
-    border: solid 4px white;
+    padding: 10px;
 }
 
-.Inicio_Formulario_Boton{
-    width: 150px;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    font-size: 1.2em;
-    border: none;
-    border-radius:25px ;
-    transition: 0.5s;
-    cursor: pointer;
+.header_Contenedor img{
+    height: 100%;
 }
 
-.Inicio_Formulario_Texto{
+/*==============Signin==============*/
+.Singin {
     width: 100%;
-    height: 30px;
-    border-radius:5px;
-    padding: 5px;
-    border: solid 2px white;
-    background: none;
-    color: #FFF;
-    font-weight: bolder;
-    font-size: 2vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#62a60e44,#61a60e44),url("../img/FondoGis.webp")no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.Singin_Contenedor {
+    width: 800px;
+    height: 500px;
+    background:#f7efe1 ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.Inicio_Formulario_Boton:hover{
-    transform:translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.39);
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.555);
+@media (max-width:767px){
+    .Singin{
+        height: auto;
+    }
+    .Singin_Contenedor {
+        width: 90%;
+        height: auto;
+    }
+}
+
+.Singin_Imagen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#00000088,#00000088),url("../img/laboratorio.webp")no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #f7efe1;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.Singin_Imagen h2{
+    font-size: 2em;
+}
+
+.Singin_Imagen a{
+    color: #61a60e;
+}
+
+.Singin_Datos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.Singin_Datos h1{
+    font-size: 2em;
+}
+
+.Singin_Boton input{
+    width: 200px;
+    height: 30px;
+    font-size: 1.1em;
+    font-weight: 800;
+    color:#000000;
+    border-radius: 25px;
+    border: none;
+    border:solid 2px #0032a0;
+    transition: 0.5s;
+    background: transparent;
+}
+
+.Singin_Boton input:hover{
+    transform: translateY(-8px);
+    background-color: #0032a0;
+    color: #f7efe1;
+}
+
+.Singin_Boton input:active{
+    transform: translateY(2px);
+}
+
+.Datos_Sesion {
+    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    width: 100%;
+    position: relative;
+  }
+  
+  .Datos_Sesion input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .Datos_Sesion label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+    border-radius: 25px;
+  }
+  
+  .Datos_Sesion :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #f7efe1;
+  }
+  
+  .Datos_Sesion :is(input:focus, input:valid) {
+    border-color: #0032a0;
+  }
+
+  .Singin_Correo{
+    width: 100%;
+  }
+
+  .Singin_Contraseña{
+    width: 100%;
+  }
+
+  /*==============Signup==============*/
+
+.Singup_Contenedor {
+    width: 800px;
+    height: 500px;
+    background:#f7efe1 ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+@media (max-width:767px){
+    .Singup_Contenedor {
+        width: 90%;
+        height: auto;
+    }
+    .Datos_Usuario{
+        flex-direction: column;
+        gap: 0;
+    }
+    .Valida_Contraseñas{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.Singup_Datos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+
+.Singup_Datos h1{
+    font-size: 2em;
+}
+
+.Valida_Contraseñas,.Datos_Usuario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Singin_Boton{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+
+/*==============Footer==============*/
+.Footer{
+    position: sticky;
+    bottom: 0;
+}
+
+
+.Fotter_Contenedor {
+    width: 100%;
+    height: 50px;
+    background: #1a1c20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Montserrat' , sans-serif;
+}
+.Footer_Logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #f7efe1;
+}
+
+.Footer_Logo img{
+    height: 100%;
+}
+
+@media(max-width:767px){
+    .Fotter_Contenedor{
+        height: auto;
+    }
+
+    .Footer_Logo {
+        height: auto;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .Footer_Logo img{
+        height: 40px;
+        
+    }
+
+}
+
+.Registro_bt{
+    pointer-events: none;
+    opacity: 0.6;
 }
 
 .Error{
-    color:  red;
-    display: none;
+    color: red;
+    font-size: 0.8em;
 }
+
+
+/*======================Alerta===========================*/
+.Alerta {
+    width: 100%;
+    height: 100%;
+    background: #00000052;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Alerta_Contenedor {
+    width: 350px;
+    height: 200px;
+    background-color: #f7efe1;
+    border-radius:15px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    
+}
+.Alerta_Titulo {
+    text-align: center;
+    color: #61a60e;
+}
+
+.Alerta_Titulo h2{
+    font-size: 3em;
+    color: #0032a0;
+}
+.Alerta_Boton {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.Alerta_Boton input{
+    width: 200px;
+    height: 30px;
+    font-size: 1.1em;
+    font-weight: 800;
+    color:#000000;
+    border-radius: 25px;
+    border: none;
+    border:solid 2px #0032a0;
+    transition: 0.5s;
+    background: transparent;
+}
+
+.Alerta_Boton input:hover{
+    transform: translateY(-8px);
+    background-color: #0032a0;
+    color: #f7efe1;
+}
+
+.Alerta_Boton input:active{
+    transform: translateY(2px);
+}
+
+
+.eye{
+    position: absolute;
+    width: 65px;
+    right: -10px;
+    top: 11px;
+    bottom: 4px;
+    z-index: 10;
+    border-radius: 4px;
+    background-color: transparent ;
+    color: #fff;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: .6s ease;
+    cursor: pointer;
+}
+
+.eye img{
+    width: 20px;
+}
+

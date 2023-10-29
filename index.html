@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body class="cuerpo">
+    <header class="header">
+        <div class="header_Contenedor">
+            <img src="img/Gsmall.webp" alt="Logo_Gisena">
+        </div>
+    </header>
+<!--===================================================-->
+    <Section class="Singin">
+        <div class="Singin_Contenedor">
+            <form class="Singup_Datos" id="Registar_Form">
+                <h1>Registrase</h1>
+                <label class="Error" id="Faltan_Datos"></label>
+                <div class="Datos_Usuario">
+                    <div class="Datos_Sesion">
+                        <input type="text" autocomplete="off" required="" name="Nombre" id="Nombre">
+                        <label>Nombre</label>            
+                    </div>
+                    <div class="Datos_Sesion">
+                        <input type="text" autocomplete="off" required="" name="Apellido" id="Apellido">
+                        <label>Apellidos </label>                
+                    </div>
+                </div>
+                <div class="Datos_Sesion">
+                    <input type="text" autocomplete="off" required="" name="Telefono" id="Telefono">
+                    <label>Teléfono</label>                
+                </div>
+                <div class="Datos_Sesion">
+                    <input type="text" autocomplete="off" required="" name="Correo" id="Correo">
+                    <label>Correo</label>                
+                </div>
+                <label class="Error" id="Contraseñas_Diferentes"></label>
+                <div class="Valida_Contraseñas">    
+                    <div class="Datos_Sesion">
+                        <input type="password" autocomplete="off" required="" id="Contraseña1" name="Contraseña">
+                        <label>Contraseña</label><button id="Singup1_eye" class="eye" type="button"><img src="img/eye.webp" id="eye1_img"></button>                
+                    </div>
+                    <div class="Datos_Sesion">
+                        <input type="password" autocomplete="off" required="" id="Contraseña2">
+                        <label>Contraseña</label><button id="Singup2_eye" class="eye" type="button"><img src="img/eye.webp" id="eye2_img"></button>                
+                    </div>
+                </div>
+                <div class="Singin_Boton">
+                    <input type="button" value="Registrase" id="Registrase_btn" class="Registro_bt">
+                </div>
+            </form>
+            <div class="Singin_Imagen">
+                <img src="img/Logo60px.png" alt="Logo GISENA">
+                <div>
+                    <h2>Bienvenido</h2>
+                    <p>Al cuidado de la sanidad agroalimentaria</p>
+                </div>
+                <div>
+                    <p class="Pregunta">¿No tienes cuenta? <span><a class="Respuesta" href="#" id="Singin_up">Regístrate</a></span></p>
+                </div>
+            </div>
+            <form class="Singin_Datos" id="Singin_Form">
+                <h1>Inicio Sesión</h1>
+                <label id="Singin_Fala" class="Error" for=""></label>
+                <div class="Datos_Sesion">
+                    <input type="text" autocomplete="off" required="" name="Correo" id="Singin_Correo" class="Singin_Correo">
+                    <label>Correo</label>            
+                </div>
+                <div class="Datos_Sesion">
+                    <input type="password" autocomplete="off" required="" name="Contraseña" id="Singin_Contraseña" class="Singin_Contraseña">
+                    <label>Contraseña</label><button id="Singin_eye" class="eye" type="button"><img src="img/eye.webp" id="eye_img"></button>               
+                </div>
+                <div class="Singin_Boton">
+                    <input type="button" value="Iniciar Sesión" id="Singin_btn">
+                </div>
+            </form> 
+        </div>
+        <div class="Alerta" id="Alerta">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2>! Éxito ¡</h2>
+                    <label for="Registro">Cuenta registada con exito</label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Aceptar" id="Alerta_btn">
+                </div>
+            </div>
+        </div>
+        <div class="Alerta" id="Alerta_Secion">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2>! Upps ¡</h2>
+                    <label id="Label_Alerta_Secion" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Aceptar" id="Alerta_btn_Secion">
+                </div>
+            </div>
+        </div>
+    </Section>
+<!--===================================================-->
+    
+<!--===================================================-->
+    <footer calss="Footer">
+        <div class="Fotter_Contenedor">
+            <div class="Footer_Logo">
+                <img src="img/Smallfooterlogo.webp" alt="">
+                <label for="Copyright">Gisenalabs® Todos los derechos reservados</label>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
+<!--======================Scripts========================-->
+<script src="js/Cambioinup.js"></script>
+<script src="js/Validadr_Contraseña.js"></script>
+<script src="js/Registar.js"></script>
+<script src="js/Secion.js"></script>
+<script src="js/Restricciones.js"></script>
+<script src="js/Mostar_Contraseña.js"></script>

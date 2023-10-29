@@ -1,84 +1,69 @@
-<?php 
+<?php
 ob_start();
-    session_start();
-    $salida="";
-        $varSesion=$_SESSION["usuario"];
-        if ($varSesion==''|| $varSesion==null) {
-            header("location:index.php");
-        }else{
+session_start();
+$id_Usuario=$_SESSION['id_usuario'];
+if($id_Usuario=="" || $id_Usuario==null){
+    header("location:index.html");
+}else{
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/Principal.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php require('Global/cabesera.php'); ?>
-<!--=======================================Primer Parete=====================================-->
-    <Section class="Cabesera">
-        <div class="Cabesera_Contenedor">
-            <div class="Cabesera_Contenedor_Titulo">
-                <img src="img/LumarLogo.png" alt="Logo_Lumar">
-                <h1>Bienvenido</h1> 
-                <h3>Serigrafia, Estampado, Sublimacion, Diseño digital y Diseño web</h3>
+    <header>
+        <div class="Header_Contenedor">
+            <div class="Header_Logo">
+                <img class="Footer_Img" src="img/Gsmall.webp" alt="">
             </div>
+            <nav class="Header_Menu">
+                <ul>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Nuevo Análisis</a></li>
+                    <li><a href="">Mis Análisis</a></li>
+                </ul>
+            </nav>
         </div>
-    </Section>
-<!--======================================Segunda Parete=====================================-->
-    <Section class="Opciones">
-        <div class="Opciones_Contenedor">
-            <div class="Opciones_Titulo">
-                <h1>Servicios</h1>
-            </div>
-            
-            <div class="Opciones_Card">
-                <div class="Card Card1">
-                    <img src="img/Pedidos-Cel.png" alt="Logo Pedidos">
-                    <h1>Pedidos</h1>
-                    <p>Agrega tus pedidos de serigrafia, estampado, sublimacion u otros</p>
-                    <input class="Card_Button" type="button" value="Entrar">
+    </header>
+
+    <!--=============================================-->
+    <section class="Menu">
+        <div class="Menu_Contenedor">
+            <h1>Análisis</h1>
+            <div class="Menu_Navegador">
+                <div class="Menu_Opciones">
+                    <h2>Conocenos</h2>
+                    <img src="img/Gsmall.webp" alt="">
+                    <input type="button" value="Conocenos">
                 </div>
-                <div class="Card Card2">
-                    <img src="img/Pedidos-Lona.png" alt="Logo Pedidos">
-                    <h1>Lonas</h1>
-                    <p>Agrega tus pedidos de lonas </p>
-                    <input class="Card_Button" type="button" value="Entrar">
+                <div class="Menu_Opciones">
+                    <h2>Nuevo Análisis</h2>
+                    <img src="img/Ilustracion1.webp" alt="">
+                    <input type="button" value="Nuevo Análisis">
                 </div>
-                <div class="Card Card3">
-                    <img src="img/Pedidos-Productos.png" alt="Logo Pedidos">
-                    <h1>Productos</h1>
-                    <p>Este apartado es para el administrador</p>
-                    <input class="Card_Button" type="button" value="Entrar">
-                </div>
-                <div class="Card Card4">
-                    <img src="img/Pedidos-Especial.png" alt="Logo Pedidos">
-                    <h1>Especial</h1>
-                    <p>Agrega tus pedidos especiales de serigrafia, estampado, sublimacion u otros</p>
-                    <input class="Card_Button" type="button" value="Entrar">
-                </div>
-                <div class="Card Card5">
-                    <img src="img/Pedidos-Digital.png" alt="Logo Pedidos">
-                    <h1>Digital</h1>
-                    <p>Agrega tus pedidos para uso digital como redes sociales u publicidad digital</p>
-                    <input class="Card_Button" type="button" value="Entrar">
-                </div>
-                <div class="Card Card6">
-                    <img src="img/Pedidos-Web.png" alt="Logo Pedidos">
-                    <h1>Web</h1>
-                    <p>Agrega tus pedidos de diseño web estatico (Limitado)</p>
-                    <input class="Card_Button" type="button" value="Entrar">
+                <div class="Menu_Opciones">
+                    <h2>Mis Análisis</h2>
+                    <img src="img/Ilustracion2.webp" alt="">
+                    <input type="button" value="Mis Análisis">
                 </div>
             </div>
         </div>
-    </Section>
+    </section>
+    <!--=============================================-->
+    <footer calss="Footer">
+        <div class="Fotter_Contenedor">
+            <div class="Footer_Logo">
+                <img  src="img/Smallfooterlogo.webp" alt="">
+                <label for="Copyright">Gisenalabs® Todos los derechos reservados</label>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
 
-<?php  } ?>
+<?php } ?>

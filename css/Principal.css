@@ -3,150 +3,157 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.header{
+/*==============Header==============*/
+header{
     width: 100%;
-    height: 50px;
-    background-color: #518C81;
-    position:sticky;
-    top:0;
+    height: 55px;
+    background: #f7efe1;
+    position: sticky;
+    top: 0;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    background: #323D40;
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/*==============Primer Parte===========================================*/
-
-.Cabesera_Contenedor {
-    width: 100%;
-    height: 500px;
-    background: #fff url('../img/Diseño.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.Cabesera_Contenedor_Titulo {
+.Header_Contenedor{
     width: 100%;
     height: 100%;
-    color: #80F2E7;
-    background-color: rgba(0, 0, 0, 0.678);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Footer_Img{
+    height: 50px;
+}
+
+.Header_Logo {
+    width: 100%;
+}
+.Header_Menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.Header_Menu ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+}
+
+
+/*==============Menu==============*/
+
+.Menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#62a60e44,#61a60e44),url("../img/FondoGis.webp")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.Menu_Contenedor {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    top: 50px;
+    align-items: center;
 }
 
-.Cabesera_Contenedor_Titulo img{
-    height: 70%;
+.Menu_Contenedor h1{
+    font-size: 2.5em;
 }
 
-.Cabesera_Contenedor_Titulo h1{
-    font-size: 3em;
-    font-family: 'Archivo Black', sans-serif;
-}
-
-.Cabesera_Contenedor_Titulo h3{
-    font-family: 'Archivo ', sans-serif;
-    text-align: center;
-    color: #f6f6f6;
-}
-
-/*==============Segunda Parte===========================================*/
-.Opciones_Contenedor {
+.Menu_Navegador {
     width: 100%;
-    padding: 20px;
-}
-
-.Opciones_Titulo{
-    width: 100%;
-    color: #80F2E7;
-    font-family: 'Archivo Black', sans-serif;
+    height: 100%;
     display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     place-items: center;
+    gap: 20px;
+}
+.Menu_Opciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 30px;
+}
+
+.Menu_Opciones img{
+    width: 250px;
+}
+
+.Menu_Opciones h2{
     font-size: 2em;
-    margin-bottom: 20px;
 }
 
-.Opciones_Card {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    place-items: center;
-    gap:20px;
-}
 
-.Card {
+.Menu_Opciones input{
     width: 200px;
-    height: 350px;
+    height: 30px;
+    font-size: 1.1em;
+    font-weight: 800;
+    color:#000000;
+    border-radius: 25px;
+    border: none;
+    border:solid 2px #0032a0;
+    transition: 0.5s;
+    background: transparent;
+}
+
+.Menu_Opciones input:hover{
+    transform: translateY(-8px);
+    background-color: #0032a0;
+    color: #f7efe1;
+}
+
+.Menu_Opciones input:active{
+    transform: translateY(2px);
+}
+
+@media(max-width:767px){
+    .Menu{
+        height: auto;
+    }
+}
+
+/*==============Foter==============*/
+.Footer{
+    position: fixed;
+    bottom: 0;
+}
+
+
+.Fotter_Contenedor {
+    width: 100%;
+    height: 50px;
+    background: #1a1c20;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #F2E8D5;
-    border-radius: 20px;
-    text-align: center;
+    padding: 5px;
+    font-family: 'Montserrat' , sans-serif;
 }
-
-.Card h1{
-    color: #80F2E7;
-    font-family:'Archivo Black', sans-serif;
-}
-
-.Card p{
-    color: #f6f6f6;
-}
-
-.Card img{
+.Footer_Logo {
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #f7efe1;
 }
 
-.Card_Button{
-    width: 150px;
-    height: 25px;
-    border-radius: 25px;
-    background-color: transparent;
-    color: #f6f6f6;
-    border: none;
-    font-family:'Archivo Black', sans-serif;
-    margin-top: 15px;
-    transition: 0.5s;
+.Footer_Logo img{
+    height: 100%;
 }
-
-.Card_Button:hover{
-    background-color: #80F2E7;
-    box-shadow: 2px 2px 3px #3a645c;
-    color: #323D40;
-    transform: translateY(-10px);
-}
-
-.Card1{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Pedidos.jpg') ;
-    background-size: cover;
-}
-.Card2{
-    background:linear-gradient(rgba(0, 0, 0, 0.568),rgba(0, 0, 0, 0.747)), url('../img/Lonas.jpg') ;
-    background-size: cover;
-}
-.Card3{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Productos.jpg') ;
-    background-size: cover;
-}
-.Card4{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Especial.jpg') ;
-    background-size: cover;
-}
-.Card5{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Digital.jpg') ;
-    background-size: cover;
-}
-.Card6{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Web.jpg') ;
-    background-size: cover;
-}
-
-

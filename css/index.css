@@ -279,6 +279,11 @@
     opacity: 0.6;
 }
 
+.corr_null{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
 .Error{
     color: red;
     font-size: 0.8em;
@@ -295,6 +300,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 .Alerta_Contenedor {
     width: 350px;

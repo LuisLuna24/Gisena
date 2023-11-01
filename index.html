@@ -37,17 +37,17 @@
                     <label>Teléfono</label>                
                 </div>
                 <div class="Datos_Sesion">
-                    <input type="text" autocomplete="off" required="" name="Correo" id="Correo">
+                    <input type="text" autocomplete="off" required="" name="Correo" id="Correo" onkeyup="validarEmail(this);">
                     <label>Correo</label>                
                 </div>
                 <label class="Error" id="Contraseñas_Diferentes"></label>
                 <div class="Valida_Contraseñas">    
                     <div class="Datos_Sesion">
-                        <input type="password" autocomplete="off" required="" id="Contraseña1" name="Contraseña">
+                        <input type="password" class="corr_null" autocomplete="off" required="" id="Contraseña1" name="Contraseña">
                         <label>Contraseña</label><button id="Singup1_eye" class="eye" type="button"><img src="img/eye.webp" id="eye1_img"></button>                
                     </div>
                     <div class="Datos_Sesion">
-                        <input type="password" autocomplete="off" required="" id="Contraseña2">
+                        <input type="password" class="corr_null" autocomplete="off" required="" id="Contraseña2">
                         <label>Contraseña</label><button id="Singup2_eye" class="eye" type="button"><img src="img/eye.webp" id="eye2_img"></button>                
                     </div>
                 </div>
@@ -95,7 +95,7 @@
         <div class="Alerta" id="Alerta_Secion">
             <div class="Alerta_Contenedor">
                 <div class="Alerta_Titulo">
-                    <h2>! Upps ¡</h2>
+                    <h2>! Upss... ¡</h2>
                     <label id="Label_Alerta_Secion" for="Registro"></label>
                 </div>
                 <div class="Alerta_Boton">

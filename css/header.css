@@ -1,0 +1,104 @@
+/*==============Header==============*/
+header{
+    position: sticky;
+    top: 0;
+    right: 0;
+    
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back{
+    width: 100%;
+    height: 50px;
+    background-color: #f7efe1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 80;
+}
+
+.logo{
+    height: 100%;
+}
+.logo_gis{
+    height: 100%;
+}
+
+.menu .Navbar ul li{
+    position: relative;
+    float: left;
+    list-style: none;
+}
+
+.menu .Navbar ul li a{
+    font-size: 18px;
+    padding: 10px;
+    color: #1a1c20;
+    text-decoration: none;
+    display: blocks;
+    transition: 0.5s;
+    font-family: "Montserrat",sans-serif;
+    font-weight: bolder;
+}
+
+.menu .Navbar ul li a:hover{
+    color: #61a60e;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    height: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:767px){
+    .menu{
+        padding: 5px;
+    }
+    .menu label{
+        display: initial;
+    }
+
+    .back{
+        width: 100%;
+        height: 50px;
+    }
+    .menu .Navbar{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background-color: #f7efe1;
+        display: none;
+        transition: 0.5s;
+    }
+
+    .menu .Navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .Navbar{
+        display: initial;
+    }
+}

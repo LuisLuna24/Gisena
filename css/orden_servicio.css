@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*========================Oreden Servicio==========================*/
+.Orden {
+    width: 100%;
+    min-height: 100vh;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montcerrat" , sans-serif;
+}
+.Orden_Contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Ornden_Form {
+    width: 100%;
+    height: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.Orden_Titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Orden_Titulo h1{
+    font-size: 2.5em;
+}
+
+.Linea_Titulo {
+    width: 400px;
+    height: 5px;
+    background: #61a60e;
+    border-radius: 25px;
+}
+.Orden_Datos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.Orden_Numero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+.Orden_NumeroSercicio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Orden_NumeroSercicio input{
+    width: 100%;
+    height: 25px;
+    border-radius: 25px;
+    padding: 0px 10px;
+    background-color: #e1cce1;
+    border: solid 1px #e1cce1;
+}
+
+.OrOrden_NumeroSercicio input:focus{
+    border: none;
+}
+
+.Orden_checkNummero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+
+
+  input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    outline: none;
+    transition: 0.5s;
+  }
+  
+  input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #262626;
+    box-sizing: border-box;
+    transition: 0.5s;
+  }
+  
+  input:checked[type="checkbox"]:before {
+    border-left: none;
+    border-top: none;
+    width: 10px;
+    border-color: #61a60e;
+    transform: rotate(45deg) translate(5px, -10px);
+  }
+
+
+.Orden_Cliente {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.OrdenDireccion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"]{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    border-radius: 25px;
+    padding: 0px 10px;
+    background-color: #e1cce1;
+    border: solid 1px #e1cce1;
+}
+
+.Orden_Contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+.Orden_Tel {
+    display: flex;
+    flex-direction: column;
+    position: relatives;
+}
+.Orden_Representante {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+
+.check_Representante {
+    width:20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.Representante {
+    width: 100%;
+}
+.Orden_Nuevo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    place-items: center;
+}
+
+.Orden_Nuevo input{
+    width: 250px;
+    height:25px;
+    background-color: #e1cce1;
+    border: none;
+    border-radius: 25px;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+.Orden_Nuevo input:hover{
+    transform: translateY(-5px);
+    background-color: #cba7cc;
+    border: solid 2px #a588a7;
+}
+
+.Orden_Nuevo input:active{
+    transform: translateY(5px);
+}
+
+
+
+table{
+    border-radius:5px ;
+    font-size: 12px;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: #e1cce1;
+    border: 1px solid #a588a7;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+td,th{
+    text-align: center;
+    padding: 8px;
+    border-right: 1px solid #a588a7;
+}
+
+td{
+    font-size: 12px;
+}
+
+thead th{
+    color:#262626;
+    background: #cba7cc;
+}
+
+tr:nth-child(even){
+    background-color: #a588a7;
+}
+
+@media(max-width:767px){
+    table{
+        display: block;
+        width: 100%;
+    }
+    thead,tbody,thead th{
+        display: block;
+    }
+    thead th:last-child{
+        border-bottom: none;
+    }
+    thead{
+        float: left;
+    }
+    tbody{
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    td,th{
+        padding: 20px 0.625em 0.625em 0.625em ;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    thead th{
+        text-align: left;
+        border-bottom: 1px solid #a588a7;
+    }
+    tbody tr{
+        display: table-cell;
+    }
+    tbody tr:nth-child(odd){
+        background: none;
+
+    }
+    tr:nth-child(even){
+        background: transparent;
+    }
+    tr td:nth-child(odd){
+        background-color: #cba7cc;
+        border-right: 1px solid #a588a7;
+    }
+    tr td:nth-child(even){
+        background-color: #e1cce1;
+        border-right: #a588a7;
+    }
+    tbody td{
+        display: block;
+        text-align: center;
+    }
+}
+
+.Orden_Botones {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    place-items: center;
+}
+
+.Orden_Botones input{
+    width: 250px;
+    height:25px;
+    background-color: #e1cce1;
+    border: none;
+    border-radius: 25px;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+.Orden_Botones input:hover{
+    transform: translateY(-5px);
+    background-color: #cba7cc;
+    border: solid 2px #a588a7;
+}
+
+.Orden_Botones input:active{
+    transform: translateY(5px);
+}
+
+
+@media(max-width:767px){
+    .Ornden_Form {
+        padding: 20px;
+    }
+    .Orden_Representante{
+        flex-direction: column;
+    }
+    .check_Representante {
+        width: 100%;
+        justify-content: start;
+    }
+    .Orden_Representante{
+        gap: 5px;
+    }
+    .Linea_Titulo{
+        width: 100%;
+    }
+
+}
+
+select{
+    width: 100%;
+    font-family: "Montserrat",sans-serif;
+}
+
+
+
+/*==============Foter==============*/
+.Footer{
+    position: fixed;
+    bottom: 0;
+}
+
+
+.Fotter_Contenedor {
+    width: 100%;
+    height: 50px;
+    background: #1a1c20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Montserrat' , sans-serif;
+}
+.Footer_Logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #f7efe1;
+}
+
+.Footer_Logo img{
+    height: 100%;
+}
+
+
+datalist{
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    margin-top: 45px;
+    cursor: pointer;
+    overflow: auto;
+    z-index: 2;
+    color: black;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+datalist option{
+    padding: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+datalist option:hover{
+    background: #e1cce1;
+}

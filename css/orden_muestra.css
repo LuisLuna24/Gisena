@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Motserrat",sans-serif;
+}
+.dat_muestra {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dat_muestra_contenedor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.dat_muestra_form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media(max-width:767px){
+  .dat_muestra_contenedor {
+    padding: 10px;
+  }
+  .dat_muestra_form{
+    padding: 10px;
+  }
+}
+.dat_muestra_titulo {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dat_muestra_titulo h1 {
+  font-size: 2.5em;
+}
+.linea_titulo {
+  width: 100%;
+  height: 5px;
+  background: #61a60e;
+  border-radius: 25px;
+}
+.dat_datos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dat_datos [type="text"] {
+  width: 100%;
+  height: 25px;
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: #e1cce1;
+  border: solid 1px #e1cce1;
+}
+
+.dat_datos [type="date"] {
+  width: 100%;
+  height: 25px;
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: #e1cce1;
+  border: solid 1px #e1cce1;
+}
+h2 {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  padding: 30px 0;
+}
+
+.dat_procedencia_titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Muestra_Prodecendia_Titulo{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Titulo_Contenedor{
+  display: flex;
+  align-items: center;
+}
+
+.dat_procedencia_titulo h1 {
+  font-size: 1.5em;
+}
+.procedencia_dat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.procedencia_dat input {
+  width: 100%;
+  height: 25px;
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: #e1cce1;
+  border: solid 1px #e1cce1;
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    width: 100%;
+    gap: 10px;
+    place-items: center;
+    margin-top: 20px;
+  }
+  .botones input{
+    width: 250px;
+    height:25px;
+    background-color: #e1cce1;
+    border: none;
+    border-radius: 25px;
+    font-weight: bolder;
+    transition: 0.5s;
+  }
+.botones input:hover{
+    transform: translateY(-8px);
+}
+.botones input :active{
+    transform: translateY(2px);
+    transition: 0.3s;
+}
+
+.Fecha_datos{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 10px;
+}
+
+.Listas_Select{
+  width: 100%;
+}
+
+/* Note that you only needs to edit the config to customize the button! */
+
+.plusButton {
+  /* Config start */
+  --plus_sideLength: 1.5rem;
+  --plus_topRightTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: #61a60e;
+  overflow: hidden;
+}
+
+.plusButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover {
+  cursor: pointer;
+}
+
+.plusButton:hover::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton:focus-visible::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton>.plusIcon {
+  fill: white;
+  width: calc(var(--plus_sideLength) * 0.7);
+  height: calc(var(--plus_sideLength) * 0.7);
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover>.plusIcon {
+  fill: #61a60e;
+  transform: rotate(180deg);
+}
+
+.plusButton:focus-visible>.plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+.Muestra_TodosDatos{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea{
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #e1cce1;
+  border: solid 1px #e1cce1;
+}
+
+.Procedencia {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Procedencia_Titulo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Procedencia_H {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Procedencia_Contenedor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.Procedencia_Datos {
+  display: flex;
+  flex-direction: column;
+}
+.Procedencia_DatosC {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 10px;
+}
+.Dato_Procedencia {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"]{
+  position: relative;
+  width: 100%;
+  height: 25px;
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: #e1cce1;
+  border: solid 1px #e1cce1;
+}

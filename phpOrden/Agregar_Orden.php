@@ -25,14 +25,19 @@ $comprobar = "SELECT * FROM public.ordenservicio where ordentrabajo = '$NoOrden'
 $ComResultado= pg_query($conexion,$comprobar);
 $numrow=pg_num_rows($ComResultado);
 
-if($numrow==1){
-	$agregarorden="UPDATE public.ordenservicio SET
-		nacional=1, idcliente='$ClienteOrden', internacional=0, fecharegistro=CURRENT_TIMESTAMP, horaregistro=CURRENT_TIMESTAMP ,estaactivo=1 ,nomcliente='$RazonOrden' ,dircliente='$DireccionOrden',emacliente='$CorreoOrden',telcliente='$TelefonoOrden',ridrepresentante='$OrdenRepresentante',ridversion='$OrdenRepresentanteVersion'
-		where ordentrabajo='$NoOrden';";
-	$respuesta=pg_query($conexion,$agregarorden);
-	echo 1;
-}else if($numrow!=1){
-	echo 2;
+try{
+	if($numrow==1){
+		$agregarorden="UPDATE public.ordenservicio SET
+			nacional=1, idcliente='$ClienteOrden', internacional=0, fecharegistro=CURRENT_TIMESTAMP, horaregistro=CURRENT_TIMESTAMP ,estaactivo=1 ,nomcliente='$RazonOrden' ,dircliente='$DireccionOrden',emacliente='$CorreoOrden',telcliente='$TelefonoOrden',ridrepresentante='$OrdenRepresentante',ridversion='$OrdenRepresentanteVersion'
+			where ordentrabajo='$NoOrden';";
+		$respuesta=pg_query($conexion,$agregarorden);
+		echo 1;
+	}else if($numrow!=1){
+		echo 2;
+	}
+}catch (Exception $e){
+	echo 3;
 }
+
 
 ?>

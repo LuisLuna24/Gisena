@@ -46,6 +46,9 @@ if($id_Usuario=="" || $id_Usuario==null){
                     <div class="Linea_Titulo"></div>
                 </div>
                 <div class="Orden_Datos">
+                    <div class="Datos_Alerta_Incompletos"> 
+                        <label for="DatosIncompletos" class="Alerta_Datos" id="Alerta_Datos"></label>
+                    </div>
                     <div class="Orden_Numero">
                         <div class="Orden_NumeroSercicio">
                             <label for="No.Servicio">Número de orden de servicio:</label>
@@ -87,7 +90,7 @@ if($id_Usuario=="" || $id_Usuario==null){
                     </div>
                     <div class="Orden_Nuevo">
                         <input type="button" value="Agregar análisis" id="Agregar_Orden">
-                        <input type="button" value="Actualizar tabla" id="Actualizar">
+                        <input type="button" value="Actualizar tabla" id="Actualizar_Tabla">
                     </div>
                     <div class="Orden_Tabla">
                         <table>
@@ -110,10 +113,44 @@ if($id_Usuario=="" || $id_Usuario==null){
                     </div>
                     <div class="Orden_Botones">
                         <input type="button" value="Enviar" id="Enviar_Orden">
-                        <input type="button" value="Calncelar" onclick="Cancelar_Muestra();">
+                        <input type="button" value="Calncelar" id="Canacelar_Muestra">
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="Alerta" id="Alerta_Cancelar">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2 id="Titulo_Alerta" >! Alerta ¡</h2>
+                    <label id="Label_Alerta_Cancelar" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Aceptar" id="Cancelar_Orden">
+                    <input type="button" value="Cancelar" id="Continuar_Orden">
+                </div>
+            </div>
+        </div>
+        <div class="Alerta" id="Alerta_Regresar">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2 id="Titulo_Alerta" >! Exito ¡</h2>
+                    <label id="Label_Alerta_Inicio" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Regresar" id="Inicio_Orden">
+                </div>
+            </div>
+        </div>
+        <div class="Alerta" id="Alerta_Nuevo">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2 id="Titulo_Alerta" >¿Nueva Orden?</h2>
+                    <label id="Label_Alerta_Nueva" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Nueva Orden" id="Nuevo_Orden">
+                </div>
+            </div>
         </div>
     </Section>
 
@@ -137,5 +174,8 @@ if($id_Usuario=="" || $id_Usuario==null){
 <script src="jsOrden/Buscar_Correo.js"></script>
 <script src="jsOrden/Buscar_Representante.js"></script>
 <script src="jsOrden/Agregar_Orden.js"></script>
+<script src="jsOrden/Alerta_Cancelar.js"></script>
+<script src="jsOrden/Nueva_Orden.js"></script>
+<script src="jsOrden/Actualizar_Tabla.js"></script>
 
 <?php  }  ?>
